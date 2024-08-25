@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="./public/bundle.js"></script>
+    <title>Form Steps</title>
+</head>
+<body>
+    <main class="landing">
+        <figure class="landing__figure">
+            <img src="assets/portada.jpg" alt="" class="landing__img">
+        </figure>
+        <section class="landing__form">
+            <p class="form__title">Donación</p>
+            <div class="form__steps">
+                <div class="form__step"><span class="step step--1">1</span>
+                    <svg class="step--check step--check--1" width="25px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        <p class="step--cantidad">Cantidad</p>
+                </div>
+                <div class="form__step"><span class="step step--2">2</span>
+                    <svg class="step--check step--check--2" width="25px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        <p class="step--datos">Datos</p>
+                </div>
+                <div class="form__step"><span class="step step--3">3</span>
+                    <svg class="step--check step--check--3" width="25px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        <p class="step--metodo">Método</p>
+                </div>
+                <div class="form__step"><span class="step step--4">4</span>
+                    <svg class="step--check step--check--4" width="25px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        <p class="step--confirmacion">Confirmación</p>
+                </div>
+            </div>
+            <div class="form--container">
+                <form id="form" action="" class="form">
+
+                    <div class="form--box form__cantidad">
+                        <p class="form--title form__cantidad--title">Ingresa la cantidad a donar</p>
+                        <p class="form--description form__cantidad--description">Cantidad a donar</p><div ><input type="text" id="form__cantidad--input" class="form--input form__cantidad--input" placeholder="$100.00"></div>
+                        <button type="button" class="form--btnnext form__cantidad--btnnext">Siguiente <svg class="form--icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                          </svg>
+                          </button>
+                    </div>
+                    <div class="form--box form__datos">
+                        <p class="form--title form__datos--title">Ingresa los datos del receptor</p>
+                        <div class="form__name__email">
+                            <div class="form__name">
+                                <p class="form--description form__datos--description">Nombre del receptor</p>
+                                <div>
+                                    <input type="text" id="form__name--input" class="form--input form__name--input" placeholder="Daniela Pomalaya">
+                                </div>
+                            </div>
+                            <div class="form__email">
+                                <p class="form--description form__datos--description">Correo electrónico del receptor</p>
+                                <div>
+                                    <input type="text" id="form__correo--input" class="form--input form__correo--input" placeholder="correo@correo.com">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="form--btnnext form__datos--btnnext">Siguiente <svg class="form--icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                          </svg>
+                          </button>
+                    </div>
+                    <div class="form--box form__metodo">
+                        <p class="form--title form__metodo--title">Selecciona el método</p>
+                        <div class="form__metodo">
+                            <div class="form__tarjeta">
+                                <input type="radio" id="tarjeta" name="metodo" class="form--input form__metodo--input" value="tarjeta"><label for="tarjeta" class="form--description form__metodo--description">Tarjeta de crédito</label>
+                            </div>
+                            <div class="form__cheque">
+                                <input type="radio" id="cheque" name="metodo" class="form--input form__metodo--input" value="cheque"><label for="cheque" class="form--description form__metodo--description">Cuenta de cheques</label>
+                            </div>
+                        </div>
+                        <button type="button" id="form__metodo--btnnext" class="form--btnnext form__metodo--btnnext">Siguiente <svg class="form--icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                          </svg>
+                          </button>
+                    </div>
+                    <div class="form--box form__confirmacion">
+                        <p class="form--title form__confirmacion--title">Datos de donación</p>
+                        <div class="form__confirmacion--informacion">
+                            <span class="form--info form--infor-cantidad">Cantidad : </span><span class="form--dato--cantidad"> $1100.00</span><br>
+                            <span class="form--info form--infor-receptor">Receptor : </span><span class="form--dato--receptor"> CREA +</span><br>
+                            <span class="form--info form--infor-correo">Correo del receptor : </span><span class="form--dato--correo"> creamas@gmail.com </span><br>
+                            <span class="form--info form--infor-metodo">Método de donación : </span><span class="form--dato--metodo"> Cuenta de cheques</span>
+                        </div>
+                        <button type="button" id="form__confirmacion--btnnext" class="form--btnnext form--btntranferir form__confirmacion--btnnext">Tranferir <svg class="form--icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                          </svg>
+                          </button>
+                    </div>
+                    <div class="form--box form__message">
+                        <p class="form--title form__message--title">Donación completada, gracias por tu participación</p>
+                        <svg width="35px" class="form--iconmessage" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                          </svg>
+                          
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

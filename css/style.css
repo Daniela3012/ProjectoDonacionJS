@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --colorGreen: #21A55A;
+    --colorTurquesa: #3CB0B6;
+}
+body {
+    padding: 10px;
+    min-height: 100vh;
+    background: linear-gradient(90deg, hsla(146, 67%, 39%, 1) 0%, hsla(183, 50%, 47%, 1) 100%);
+    font-family: "Karla", sans-serif;
+    display: flex;
+}
+span {
+    margin-left: 5px;
+}
+/*----- LANDING -----*/
+.landing {
+    margin: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0px 13px 15px 6px rgba(0, 0, 0, 0.219);
+    border-radius: 20px;
+    overflow: hidden;
+}
+/*----- FIGURE -----*/
+.landing__figure {
+    height: 60vh;
+}
+.landing__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/*----- STEPS -----*/
+.landing__form {
+    background-color: #fff;
+    padding: 35px;
+}
+.form__title {
+    color: var(--colorTurquesa);
+    margin-bottom: 15px;
+    font-size: 1.7rem;   
+    font-weight: bolder;
+    text-align: center;
+}
+.form__steps {
+    margin-bottom: 15px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.step, .step--check {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.step {
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #e0e0e0;
+}
+
+.step--check {
+    padding: 5px;
+    background-color: var(--colorGreen);
+    color: #fff;
+    font-weight: bolder;
+    vertical-align: middle;
+    outline: 3px solid #a4eec4;
+    display: none;
+}
+
+/* ------- FORM -------*/
+.form--container {
+    background-color: rgb(243, 243, 243);
+    border-radius: 15px;
+    height: 70%;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+
+}
+.form {
+    height: 100%;
+    width: 500%;
+    display: flex;
+    transition: transform 0.5s ease;
+
+}
+.form--box {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.form--title {
+    font-weight: bold;
+}
+.form--input {
+    padding: 10px;
+    border: 2px solid #d8d8d8;
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.form--input--error {
+    position: relative;
+}
+
+.form--input--error::after {
+    content: 'Por favor ingresa correctamente el valor';
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    top: 80%;
+    left: 0;
+}
+
+.form--input:focus {
+    border-color: var(--colorTurquesa);
+    outline: none;
+}
+.form--input::placeholder {
+    color: #bebebe;
+    text-align: center;
+}
+.error:focus {
+    border: 2px solid #ce3f3f;
+}
+.form--btnnext {
+    margin-top: 15px;
+    border: none;
+    padding: 12px 35px;
+    background-color: var(--colorTurquesa);
+    border-radius: 5px;
+    transition: background-color 1.5s ease,
+                color 0.3s ease-in;
+}
+.form--btnnext:hover {
+    background-color: var(--colorGreen);
+    color: #fff;
+}
+.form--icon {
+    display: inline-block;
+    width: 20px;
+    vertical-align: middle;
+}
+.form__name__email, .form__metodo {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.form__tarjeta, .form__cheque {
+    border: 2px solid var(--colorTurquesa);
+    padding: 15px;
+    border-radius: 5px;
+}
+.form__metodo--input {
+    margin-right: 5px;
+}
+.form--info {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.form--iconmessage {
+    color: var(--colorTurquesa);
+}
+
+
+@media (max-width: 768px) {
+    .landing {
+        width: 95%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    .form__steps {
+        justify-content: space-between;
+    }
+    .form__step {
+        margin: 4px;
+    }
+    .landing__figure {
+        height: 20vh;
+    }
+    .landing__form {
+        min-height: 70vh;
+    }
+    .form--container {
+        height: 80%;
+    }
+    .form {
+        width: 500%;
+    }
+    .form--box {
+        width: 20%;
+    }
+}
